@@ -1,0 +1,26 @@
+name: BukkitLua
+main: com.nickardson.bukkitlua.BukkitLua
+version: 0.0
+
+commands:
+  lua:
+    description: Runs the Lua string that the person says.
+    permission: lua.list 
+    usage: See /lua list for a list of subcommands. 
+
+permissions:
+  lua.*:
+    description: Gives access to all Lua commands
+    children:
+      lua.runfile: true
+      lua.run: true
+      lua.list: true
+  lua.list:
+    description: Allows you to pull up the Lua commands list.
+    default: op
+  lua.runfile:
+    description: Allows you to run an existing Lua file.
+    default: op
+  lua.script:
+    description: Allows you to run custom Lua code.
+    default: op
