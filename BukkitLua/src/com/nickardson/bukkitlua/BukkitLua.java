@@ -2,8 +2,8 @@ package com.nickardson.bukkitlua;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Array;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -100,14 +100,16 @@ public class BukkitLua extends org.bukkit.plugin.java.JavaPlugin {
 				}
 			}
 		}
-		else if (args[0].equalsIgnoreCase("List")) {
-			BukkitLua.printHelp(sender);
-			return true;
-		}
 		else if (args.length == 0) {
 			BukkitLua.printHelp(sender);
 			return true;
 		}
+		else if (args[0].equalsIgnoreCase("List")) {
+			BukkitLua.printHelp(sender);
+			return true;
+		}
+		
+		
 		
 		return false;
 	}
